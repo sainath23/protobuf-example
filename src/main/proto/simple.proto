@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package example.simple;
+
+option java_package = "com.example.simple"; // puts generated class file to this package instead of above only for java
+option java_outer_classname = "MySimple"; // Instead of naming generated class file based on file name (simple.proto) use provided
+
+message SimpleMessage {
+  int32 id = 1;
+  bool is_simple = 2;
+  string name = 3;
+  repeated int32 sample_list = 4;
+}
